@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Code ABQ — April 2026</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+  <style>
+    :root {
+      --bg-primary: #1a1a2e;
+      --bg-card: #16213e;
+      --bg-dark: #0f0f1a;
+      --text-white: #ffffff;
+      --text-gray: #c0c0c0;
+      --accent-teal: #028090;
+      --accent-coral: #F96167;
+      --border-card: #2a3a5e;
+      --dd-teal: #1a5c6b;
+      --dd-gold: #f5c518;
+    }
+
+    .reveal {
+      font-family: system-ui, -apple-system, sans-serif;
+      color: var(--text-gray);
+    }
+
+    .reveal .slides section {
+      background-color: var(--bg-primary);
+    }
+
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+      font-family: Consolas, 'Courier New', monospace;
+      color: var(--text-white);
+      text-transform: none;
+    }
+
+    .reveal h1 { font-size: 2.5em; }
+    .reveal h2 { font-size: 1.8em; }
+    .reveal h3 { font-size: 1.4em; }
+
+    .reveal p { line-height: 1.6; }
+
+    .reveal strong { color: var(--text-white); }
+
+    .reveal a { color: var(--accent-teal); }
+
+    .accent-coral { color: var(--accent-coral) !important; }
+    .accent-teal { color: var(--accent-teal) !important; }
+
+    .dim-text { color: #888; }
+    .small-text { font-size: 0.65em; }
+
+    .qr-container {
+      position: absolute;
+      bottom: 40px;
+      right: 60px;
+    }
+
+    .qr-container canvas,
+    .qr-container img {
+      display: block;
+    }
+
+    .presenter-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: 8px;
+      padding: 1.2em 1.8em;
+      text-align: left;
+      max-width: 750px;
+      margin: 0.6em auto;
+    }
+
+    .presenter-card h3 {
+      margin: 0 0 0.3em 0;
+      font-size: 1.1em;
+    }
+
+    .presenter-card p {
+      margin: 0;
+      font-style: italic;
+      color: var(--accent-teal);
+      font-size: 0.9em;
+    }
+
+    .dd-slide a {
+      color: var(--dd-gold) !important;
+    }
+
+    .dd-highlight {
+      color: var(--dd-gold) !important;
+    }
+
+    .dd-badge {
+      display: inline-block;
+      background: var(--dd-teal);
+      color: var(--dd-gold);
+      padding: 0.3em 0.8em;
+      border-radius: 4px;
+      font-family: Consolas, 'Courier New', monospace;
+      font-size: 0.75em;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ============================================ -->
+      <!-- SLIDE 1: TITLE                               -->
+      <!-- ============================================ -->
+      <section data-background-color="#1a1a2e">
+        <h1>Claude Code ABQ</h1>
+        <p style="font-size:1.1em; color:#c0c0c0;">Albuquerque's AI-Assisted Development Community</p>
+        <p style="margin-top:1.5em;"><a href="https://claudeabq.dev">claudeabq.dev</a></p>
+        <div class="qr-container" id="qr1"></div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- SLIDE 2: WHY WE'RE HERE                      -->
+      <!-- ============================================ -->
+      <section data-background-color="#1a1a2e">
+        <h2>Why We're Here</h2>
+        <p style="font-size:1.2em;"><strong>We share what actually works.</strong></p>
+        <ul>
+          <li>Honest about what's working and what isn't — no hype, no marketing</li>
+          <li>We focus on Claude Code because it's the best tool right now.<br>Bring us something better and we'll try it.</li>
+          <li>Developers, non-developers, all levels — if you're curious, you belong here</li>
+        </ul>
+        <aside class="notes">This isn't a fan club. We're not here to sell you on Claude Code. We're here because right now, today, it's the most effective AI coding tool we've found. If someone walks in next month and shows us something that blows it away, we'll be the first ones trying it. Whether you write code for a living or you've never opened a terminal, there's a seat for you.</aside>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- SLIDE 3: AUDIENCE CHECK                      -->
+      <!-- ============================================ -->
+      <section data-background-color="#1a1a2e">
+        <h2>Quick show of hands...</h2>
+        <p class="fragment">Who writes code professionally?</p>
+        <p class="fragment">Who has used any AI coding tool?</p>
+        <p class="fragment">Who has used Claude Code specifically?</p>
+        <p class="fragment">Who has NEVER written code?</p>
+        <aside class="notes">Quick show of hands so I know who I'm talking to tonight. Go through each, read the room, acknowledge all groups. This talk is for ALL of you — the concepts apply whether you code or not.</aside>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- SLIDE 4: DEEP DIVE CODING                    -->
+      <!-- ============================================ -->
+      <section data-background-color="#1a1a2e" class="dd-slide">
+        <h2 style="color: var(--dd-gold);">Deep Dive Bootcamps</h2>
+        <p style="font-style:italic; color:#c0c0c0;">powered by CNM Ingenuity</p>
+        <p style="margin-top:1em;"><span class="dd-badge">Web Development &amp; AI Tools</span></p>
+        <p style="margin-top:0.8em;">12-week full-stack bootcamp — now with AI-assisted development</p>
+        <p style="margin-top:0.5em; color:#888; font-size:0.85em;">Right here at CNM STEMulus Center, Downtown Albuquerque</p>
+        <p style="margin-top:0.5em; color:#888; font-size:0.85em;">Next cohort: <strong>June 1 – Aug 21, 2026</strong> &nbsp;|&nbsp; Deadline: May 8</p>
+        <p style="margin-top:1em;"><a href="https://deepdivecoding.com">deepdivecoding.com</a></p>
+        <aside class="notes">Quick shout-out to our hosts. Deep Dive Bootcamps has added AI-assisted development to the web dev curriculum. Students learn to build WITH AI tools from day one. 12 weeks, full-stack, right here at the STEMulus Center. Next cohort starts June 1 — applications close May 8. If you're interested in transitioning into tech or leveling up, check out deepdivecoding.com or talk to me after.</aside>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- SLIDE 5: SINCE OUR LAST MEETUP               -->
+      <!-- ============================================ -->
+      <section data-background-color="#1a1a2e">
+        <h3>Since Our Last Meetup <span class="dim-text" style="font-size:0.7em;">(Mar 12)</span></h3>
+        <div style="font-size:0.75em; line-height:2.2; text-align:left; max-width:850px; margin:0 auto;">
+          <ul>
+            <li><strong>Computer Use</strong> — Claude can click, scroll &amp; navigate your screen <span style="color:#888; font-size:0.85em;">(Pro / Max)</span></li>
+            <li><strong>Auto Mode</strong> — smart approval layer; 93% of prompts already auto-approved <span style="color:#888; font-size:0.85em;">(Team / Enterprise / API)</span></li>
+            <li><strong>Scheduled Tasks</strong> — recurring Claude Code jobs in the cloud, laptop off or on</li>
+            <li><strong>Cloud Auto-Fix</strong> — Claude follows your PRs, fixes CI, addresses review comments</li>
+            <li><strong>Dispatch</strong> — assign tasks from your phone, return to finished work on desktop</li>
+            <li><strong>/powerup</strong> — learn Claude Code features with in-terminal animated lessons</li>
+            <li><strong>1M context GA</strong> — Opus 4.6 + Sonnet 4.6, native 1M tokens at standard pricing</li>
+          </ul>
+        </div>
+        <aside class="notes">Rapid fire — 15-20 seconds per item. Computer Use dropped March 23 — Claude can literally use your computer, click buttons, navigate apps. Research preview, Pro and Max. Auto Mode is the smart permissions layer — users were already approving 93% of prompts, so those are now automatic with a safety classifier. Team, Enterprise, and API only for now. Scheduled Tasks let you set up recurring Claude Code jobs that run in the cloud — your laptop can be off. Cloud Auto-Fix watches your PRs, fixes CI failures and review comments, pushes fixes. Dispatch lets you assign tasks from your phone to Claude running on your desktop — walk away, come back to finished work. /powerup is great for newcomers — animated interactive lessons right in your terminal. And 1M context is now GA at standard pricing on Opus and Sonnet 4.6, no beta header needed.</aside>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- SLIDE 6: CALL FOR PRESENTERS                 -->
+      <!-- ============================================ -->
+      <section data-background-color="#1a1a2e">
+        <h2>Call for Presenters</h2>
+        <p style="font-size:1.2em;"><strong>Show us something we can use.</strong></p>
+        <ul>
+          <li>About 30 minutes</li>
+          <li>We want workflows, tools, and techniques<br>that developers can implement NOW</li>
+          <li>You don't need to be an expert — share what's working for you</li>
+          <li><strong>Talk to Marty</strong></li>
+        </ul>
+        <aside class="notes">We're looking for presenters. Show us a workflow, a tool, a technique that the people in this room can go home and implement. That's what makes this community valuable.</aside>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- SLIDE 7: TONIGHT'S PRESENTERS                -->
+      <!-- ============================================ -->
+      <section data-background-color="#1a1a2e">
+        <h2>Tonight</h2>
+        <div class="presenter-card">
+          <h3>Tim Farkas</h3>
+          <p>"Unblocking Your Vision: Entrepreneurship in the Agentic Age"</p>
+        </div>
+        <div class="presenter-card">
+          <h3>Michael Noyes-Smith</h3>
+          <p>"OpenClaw: The Open-Source AI Agent That Actually Does Things"</p>
+        </div>
+        <aside class="notes">Two great talks tonight. Tim is going to talk about how AI agents are changing the landscape for entrepreneurs. Then Michael is going to demo OpenClaw — an open-source AI agent. Let's give them both a warm welcome.</aside>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- PRESENTER CONTENT GOES HERE                  -->
+      <!-- ============================================ -->
+
+      <!-- ============================================ -->
+      <!-- SLIDE 7: DEEP DIVE CODING                    -->
+      <!-- ============================================ -->
+      <section data-background-color="#1a1a2e" class="dd-slide">
+        <h2 style="color: var(--dd-gold);">Deep Dive Bootcamps</h2>
+        <p style="font-style:italic; color:#c0c0c0;">powered by CNM Ingenuity</p>
+        <p style="margin-top:1em;"><span class="dd-badge">Web Development &amp; AI Tools</span></p>
+        <p style="margin-top:0.8em;">12-week full-stack bootcamp — now with AI-assisted development</p>
+        <p style="margin-top:0.5em; color:#888; font-size:0.85em;">Right here at CNM STEMulus Center, Downtown Albuquerque</p>
+        <p style="margin-top:0.5em; color:#888; font-size:0.85em;">Next cohort: <strong>June 1 – Aug 21, 2026</strong> &nbsp;|&nbsp; Deadline: May 8</p>
+        <p style="margin-top:1em;"><a href="https://deepdivecoding.com">deepdivecoding.com</a></p>
+        <aside class="notes">Deep Dive Bootcamps has added AI-assisted development to the web dev curriculum. Students learn to build WITH AI tools from day one. 12 weeks, full-stack, right here at the STEMulus Center. Next cohort starts June 1 — applications close May 8. If you're interested in transitioning into tech or leveling up, check out deepdivecoding.com or talk to me after.</aside>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- CALL FOR PRESENTERS (SECOND ASK)             -->
+      <!-- ============================================ -->
+      <section data-background-color="#1a1a2e">
+        <h2>Call for Presenters</h2>
+        <p style="font-size:1.2em;"><strong>Show us something we can use.</strong></p>
+        <ul>
+          <li>About 30 minutes</li>
+          <li>We want workflows, tools, and techniques<br>that developers can implement NOW</li>
+          <li>You don't need to be an expert — share what's working for you</li>
+          <li><strong>Talk to Marty</strong></li>
+        </ul>
+        <aside class="notes">Remember from the beginning — we need presenters. Workflows, tools, techniques developers can implement now. Talk to me.</aside>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- SLIDE 10: MINGLE                             -->
+      <!-- ============================================ -->
+      <section data-background-color="#1a1a2e">
+        <h2>Mingle. Share. Help each other.</h2>
+        <p style="margin-top:1.5em;">Open your laptops. Show your neighbor what you're working on.</p>
+        <p style="margin-top:1.5em;"><a href="https://docs.anthropic.com/en/docs/claude-code/getting-started">docs.anthropic.com/en/docs/claude-code/getting-started</a></p>
+        <aside class="notes">This is the best part. Get up, move around, introduce yourself to someone you haven't met. Show each other what you're building. If you need help getting set up with Claude Code, find someone who's already using it — or find me. This is why we meet in person.</aside>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- SLIDE 11: CLOSING                            -->
+      <!-- ============================================ -->
+      <section data-background-color="#1a1a2e">
+        <h2><a href="https://claudeabq.dev">claudeabq.dev</a></h2>
+        <div id="qr2" style="margin:1em auto; width:200px;"></div>
+        <p style="margin-top:1.5em; color:#888;">See you next month.</p>
+        <aside class="notes">Register for next month at claudeabq.dev. Thanks for being here tonight — see you in May.</aside>
+      </section>
+
+    </div><!-- .slides -->
+  </div><!-- .reveal -->
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.min.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      transition: 'fade',
+      backgroundTransition: 'fade',
+      plugins: [RevealNotes],
+      width: 1920,
+      height: 1080,
+      margin: 0.04
+    });
+
+    // Generate QR codes
+    function makeQR(targetId, url, cellSize) {
+      var qr = qrcode(0, 'M');
+      qr.addData(url);
+      qr.make();
+      var el = document.getElementById(targetId);
+      if (el) {
+        el.innerHTML = qr.createSvgTag(cellSize || 5);
+        var svg = el.querySelector('svg');
+        if (svg) {
+          svg.style.background = '#ffffff';
+          svg.style.padding = '8px';
+          svg.style.borderRadius = '4px';
+        }
+      }
+    }
+
+    makeQR('qr1', 'https://luma.com/opi8awvh', 4);
+    makeQR('qr2', 'https://luma.com/opi8awvh', 5);
+  </script>
+</body>
+</html>
